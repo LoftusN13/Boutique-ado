@@ -14,7 +14,7 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
     )
 
-    ordering = ('sku')
+    ordering = ('sku',)
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -24,5 +24,5 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Product)
-admin.site.register(Category)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)
